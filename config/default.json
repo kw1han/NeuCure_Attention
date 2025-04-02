@@ -1,0 +1,83 @@
+{
+    "app_name": "儿童注意力康复训练系统",
+    "version": "1.0.0",
+    "log_level": "INFO",
+    "auto_save": true,
+    "data_dir": "data",
+    
+    "device": {
+        "type": "simulated",
+        "model": "random",
+        "port": "",
+        "baudrate": 115200
+    },
+    
+    "acquisition": {
+        "sample_rate": 256,
+        "channel_count": 8,
+        "use_filters": true,
+        "notch_filter": 50,
+        "bandpass_low": 1,
+        "bandpass_high": 50
+    },
+    
+    "attention": {
+        "update_interval": 1,
+        "window_size": 4,
+        "threshold_high": 70,
+        "threshold_medium": 40,
+        "baseline_duration": 30,
+        "calibration_duration": 60
+    },
+    
+    "training": {
+        "default_duration": 10,
+        "default_difficulty": 1,
+        "auto_difficulty": true,
+        "attention_threshold": 70,
+        "use_training_plan": false,
+        "feedback_strength": 1.0,
+        "games": [
+            {
+                "key": "space_baby",
+                "name": "太空宝贝",
+                "description": "通过集中注意力控制太空宝贝火箭上下移动，收集星星并避开陨石",
+                "min_age": 5,
+                "max_age": 12,
+                "focus_type": "sustained"
+            },
+            {
+                "key": "magic_forest",
+                "name": "魔法森林大冒险",
+                "description": "通过注意力控制魔法力量，帮助小精灵探索神秘森林",
+                "min_age": 6,
+                "max_age": 14,
+                "focus_type": "selective"
+            },
+            {
+                "key": "color_puzzle",
+                "name": "色彩拼图奇遇",
+                "description": "通过注意力转移和集中，完成色彩拼图任务",
+                "min_age": 7,
+                "max_age": 15,
+                "focus_type": "divided"
+            }
+        ]
+    },
+    
+    "user": {
+        "name": "",
+        "age": 10,
+        "gender": "male",
+        "has_medical_history": false,
+        "note": ""
+    },
+    
+    "ui": {
+        "theme": "default",
+        "font_size": 12,
+        "show_real_time_eeg": true,
+        "show_spectral_view": true,
+        "chart_update_interval": 100
+    }
+} 
