@@ -42,7 +42,6 @@ env/
 *.spec
 
 # Data files
-data/
 logs/
 models/*.pkl
 
